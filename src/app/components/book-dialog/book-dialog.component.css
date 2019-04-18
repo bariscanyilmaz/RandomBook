@@ -1,0 +1,65 @@
+.dialog-content{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+
+.book{
+    position: relative;
+    width: 400px;
+    height:270px;
+    border-radius: 5px;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.book-cover{
+    box-shadow: 0 4px 8px 0 rgba(91,79,159, 0.2), 0 6px 20px 0 rgba(91,79,159, 0.19);
+    position: absolute;
+    width: 170px;
+    height: 240px;
+    left: 10px;
+    top: 15px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.book-name{
+    color: white;
+    text-shadow: 2px 2px 4px #dcd6fd;   
+
+    font-weight: 700;
+    position: absolute;
+    min-height: 40px;
+    top: 30px;
+    left: 200px;
+}
+
+.book-author{
+    color: white;
+    text-shadow: 2px 2px 4px #dcd6fd;   
+
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.book-author span{
+    color: white;    
+    text-shadow: 2px 2px 4px #dcd6fd;   
+    font-weight: 700;
+}
+
+.categories{
+    text-shadow: 2px 2px 4px #dcd6fd;   
+    color: white;
+    display: flex;
+    position: absolute;
+    left: 200px;
+    bottom: 60px;
+}
+
+.category{
+    text-shadow: 2px 2px 4px #dcd6fd;   
+}

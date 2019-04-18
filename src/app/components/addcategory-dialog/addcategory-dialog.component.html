@@ -1,0 +1,10 @@
+<h1 mat-dialog-title class="category-dialog-title">Add Category</h1>
+<div mat-dialog-content class="category-dialog-content">
+  <mat-form-field>
+    <input matInput #categoryName [(ngModel)]="category">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="category-dialog-actions">
+  <button mat-flat-button [disabled]="!categoryName.value" (click)="addCategory()" color="warn">Save</button>
+  <button mat-flat-button color="accent" (click)="cancel()">Cancel</button>
+</div>

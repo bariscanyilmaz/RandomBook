@@ -1,0 +1,11 @@
+<mat-dialog-content class="dialog-content">  
+  <div #book class="book" ><img class="book-cover" [src]="data.CoverPhoto" alt="data.Name">
+    <p class="book-name">{{data.Name}}</p>
+    <p class="book-author">By <span>{{data.Author}}</span> </p>
+    <div class="categories">
+      <div class="category" *ngFor="let category of data.Categories;"> {{category}}</div>
+    </div>
+
+  </div>
+</mat-dialog-content>
+

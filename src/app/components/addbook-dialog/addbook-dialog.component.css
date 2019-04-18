@@ -1,0 +1,21 @@
+.book-dialog-actions{
+    width: 100%;
+    display: flex;
+}
+.book-dialog-actions button:nth-child(2){
+    margin-left: 10px;
+}
+.add-book-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.plus-icon{
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.book-form-category{
+    width: 80%;
+}

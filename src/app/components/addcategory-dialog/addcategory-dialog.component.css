@@ -1,0 +1,17 @@
+.category-dialog-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.category-dialog-actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.category-dialog-title{
+    text-align: center;
+}

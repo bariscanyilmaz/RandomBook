@@ -1,11 +1,26 @@
-<div class="book-list">
-  <div class="book" *ngFor="let book of books">
-    <img class="book-cover" [src]="book.CoverPhoto" alt="book.Name">
-    <p class="book-name">{{book.Name}}</p>
-    <p class="book-author">By <span>{{book.Author}}</span> </p>
-    
-    <div class="categories" >
-        <div class="category" *ngFor="let category of book.Categories;"> {{category}}</div>
-    </div>
+<div class="container">
+
+  <div class="category-list">
+    <mat-button-toggle-group #categoryGroup="matButtonToggleGroup">
+      <mat-button-toggle [value]="category.Name" *ngFor="let category of categories">
+        {{category.Name}}
+      </mat-button-toggle>
+
+    </mat-button-toggle-group>
+
   </div>
+
+  <button mat-fab color="warn" [disabled]="!categoryGroup.value" (click)="getBook(categoryGroup.value)">Get</button>
+
+  <div class="actions">
+    <button mat-flat-button color="primary" (click)="openAddBook()" class="btn-add-book">Add Book</button>
+  <button mat-flat-button color="primary" (click)="openAddCategory()" class="btn-add-category">Add Category</button>
+  </div>
+  
 </div>
+
+
+<swal #swalInformation title=" " text="No books were found in the category you selected." type="info"></swal>
+<!-- 
+
+</div> -->

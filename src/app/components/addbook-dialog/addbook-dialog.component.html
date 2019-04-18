@@ -1,0 +1,43 @@
+<div mat-dialog-content class="book-dialog-content">
+    <form [formGroup]="addBookForm" class="add-book-form">
+
+        <mat-form-field>
+            <input formControlName="bookName" matInput placeholder="Book Name" required >
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="bookAuthor" placeholder="Book Author" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input formControlName="bookCoverPhoto" matInput placeholder="Book Cover Photo URL" required>
+        </mat-form-field>
+        <div class="book-form-categories" formArrayName="bookCategories"
+            *ngFor="let item of addBookForm.get('bookCategories').controls; let i = index;">
+            <mat-form-field [formGroupName]="i" class="book-form-category">
+                <mat-label>Book Category</mat-label>
+                <mat-select formControlName="bookCategory" required>
+                    <mat-option *ngFor="let category of data" [value]="category.Name">
+                        {{category.Name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button *ngIf="i!=0" mat-button (click)="removeCategoryControl(i)">
+                <mat-icon>delete</mat-icon>
+
+            </button>
+
+        </div>
+
+        <div class="plus-icon">
+            <button mat-button (click)="addCategoryControl()">
+                <mat-icon>add</mat-icon>
+
+            </button>
+        </div>
+
+    </form>
+</div>
+<div mat-dialog-actions class="book-dialog-actions">
+    <button mat-flat-button (click)="save()" [disabled]="addBookForm.invalid" color="warn">Save</button>
+    <button mat-flat-button color="accent" (click)="cancel()">Cancel</button>
+</div>
