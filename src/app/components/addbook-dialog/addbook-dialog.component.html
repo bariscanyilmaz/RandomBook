@@ -12,7 +12,7 @@
             <input formControlName="bookCoverPhoto" matInput placeholder="Book Cover Photo URL" required>
         </mat-form-field>
         <div class="book-form-categories" formArrayName="bookCategories"
-            *ngFor="let item of addBookForm.get('bookCategories').controls; let i = index;">
+            *ngFor="let item of addBookForm.get('bookCategories')['controls']; let i = index;">
             <mat-form-field [formGroupName]="i" class="book-form-category">
                 <mat-label>Book Category</mat-label>
                 <mat-select formControlName="bookCategory" required>
